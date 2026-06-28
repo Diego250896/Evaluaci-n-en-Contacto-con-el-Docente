@@ -4,90 +4,53 @@ EVALUACION.png
 Instrucciones: 
 PROYECTO INTEGRADOR 
 
-a. Nombre del proyecto (integra contenido de cuatro unidades): 
-
-El impacto de las nuevas tecnologías en la sociedad: desarrollo y proyección de soluciones informáticas 
-
+Nombre del proyecto (JUEGO DEL AHORCADO): 
  
+Realizado por DIEGO CÓRDOVA
 
-b. Descripción del problema 
+Objetivo del sistema
 
-En la actualidad, las nuevas tecnologías influyen significativamente en la sociedad, transformando la forma en que las personas interactúan, trabajan y resuelven problemas. 
+El objetivo del sistema (el programa o software) en un juego del ahorcado temático de Python es gestionar la lógica del juego de forma automática, evaluando el progreso del usuario y reforzando conceptos clave de programación mediante la interacción.
 
-Este proyecto busca que se analice este impacto y desarrolle una solución informática que responda a una necesidad específica, integrando los conocimientos adquiridos durante el curso. 
+descripcion de funcionalidades
 
- 
+Para que el sistema del juego del ahorcado funcione correctamente, debe cumplir con una serie de tareas automatizadas. A continuación, se describen las funcionalidades clave del sistema, detallando cómo se aplican las variables, condicionales y listas en cada una:
 
-c. Propósito del proyecto. 
+1. Inicialización del Juego
+El sistema debe preparar el entorno antes de que el usuario empiece a jugar.
 
-Analizar el impacto de las nuevas tecnologías en la sociedad. 
-Aplicar conocimientos de diseño, programación y arquitectura de software. 
-Desarrollar un sistema funcional basado en una problemática definida. 
-Integrar los contenidos de las cuatro unidades de la asignatura. 
-Reflexionar sobre el uso y futuro de la tecnología en el entorno real. 
- 
+Selección aleatoria: El sistema elige una palabra al azar de una lista de conceptos de Python (ej. ["bucle", "funcion", "booleano"]).
 
-d. Instrucciones para el desarrollo del proyecto.  El proyecto se desarrollará durante las 8 semanas del curso y deberá seguir las siguientes fases: 
+Configuración del estado: Se inicializan las variables de control: el número de intentos (generalmente 6) y una lista de guiones bajos (['_', '_', '_', '_']) que representa la palabra oculta.
 
- 
+2. Captura y Validación de la Entrada del Usuario
+El sistema recibe la letra que el jugador escribe y asegura que sea válida.
 
-image.png
+Control de errores: Usa condicionales (if) para verificar que el usuario haya ingresado exactamente una letra y que no sea un número o un carácter especial.
 
-INSTRUCCIONES
+Evitar duplicados: El sistema revisa si la letra ya existe en la lista de letras intentadas para avisar al jugador y no penalizarlo doblemente.
 
-1. Planificación del proyecto 
+3. Evaluación de la Letra (Lógica del Juego)
+Esta es la funcionalidad central donde el sistema decide qué pasa con la jugada.
 
-Definir el alcance del sistema a desarrollar. 
-Identificar el problema que se desea resolver. 
-Elaborar un cronograma de actividades desde la semana 1 hasta la 8, considerando los temas de la asignatura. 
-2. Diseño del sistema
+Caso de Acierto: Si (if) la letra está en la palabra secreta, el sistema recorre la palabra y reemplaza los guiones bajos (_) en las posiciones (índices) correctas dentro de la lista de progreso.
 
-Elaborar diagramas de funcionalidad (casos de uso, flujo, etc.). 
-Diseñar la arquitectura del sistema. 
-3. Desarrollo del software
+Caso de Error: Si no (else) está en la palabra, el sistema reduce en 1 la variable de intentos_restantes y añade la letra a una lista de "letras incorrectas" para mostrársela al usuario.
 
-Implementar el sistema en base a los diagramas diseñados. 
-Aplicar estructuras lógicas (condicionales y repetitivas). 
-Organizar el código de manera clara y estructurada. 
-Utilizar GitHub para el control de versiones. 
-4. Integración de contenidos
+4. Actualización del Estado Visual (Interfaz en Consola)
+El sistema refresca la pantalla en cada turno para mostrar los avances.
 
-El proyecto debe evidenciar la aplicación de: 
+Dibujo del progreso: Muestra la lista de la palabra oculta convertida en texto legible (ej: v _ r _ _ b l e).
 
-Funcionalidades del sistema 
-Estructura lógica del programa 
-Organización del código 
-Uso de herramientas de desarrollo 
-Relación con el impacto tecnológico en la sociedad 
- 
+Estadísticas actuales: Muestra el valor de la variable de intentos disponibles y el monigote del ahorcado correspondiente al número de fallos.
 
-Características de entrega (Semana 8) 
+5. Verificación del Fin de la Partida
+Después de cada intento, el sistema evalúa si el juego debe continuar o terminar mediante condicionales:
 
-Repositorio en GitHub 
+Condición de Victoria: Si ya no quedan guiones bajos (_) en la lista de progreso, el sistema detiene el juego y muestra un mensaje de felicitación.
 
-Debe contener: 
+Condición de Derrota: Si la variable intentos_restantes llega a 0, el sistema detiene el bucle, dibuja el ahorcado completo y revela la palabra secreta que el usuario no pudo adivinar.
 
-Código completo del proyecto 
-Diagramas desarrollados (funcionalidad y arquitectura) 
-Archivo README con: 
-Nombre del proyecto 
-Integrantes 
-Objetivo del sistema 
-Descripción de funcionalidades 
-Fecha 28-06-2026
- 
+Fecha de Entrega 28-06-2026
 
-Documento del proyecto 
 
-Debe incluir: 
-
-Introducción 
-Descripción del problema 
-Relación con los contenidos de la asignatura 
-Explicación del sistema desarrollado 
-Reflexión sobre el impacto de la tecnología 
- 
-
-Presentación (Canva, PowerPoint, Prezi, etc.) 
-Explicación del proyecto 
-Video demostrativo del funcionamiento del software 
